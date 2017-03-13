@@ -253,7 +253,7 @@ public class RecruitScreen implements Screen, InputProcessor {
 				
 			if(t.focused)
 			{
-				current.setCoords(x + mousex, y + mousey);
+				current.deploy(gb, x+mousex, y+mousey);
 				turnQ.add(current);
 				game.setScreen(prevScreen);
 				Gdx.input.setInputProcessor(prevScreen);

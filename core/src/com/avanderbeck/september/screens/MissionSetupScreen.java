@@ -85,6 +85,9 @@ public class MissionSetupScreen implements Screen, InputProcessor {
 		current = recruits.get(0);
 
 		Gdx.input.setInputProcessor(this);
+		
+		for(int[] xy : coords)
+			gb.getTile(xy[0], xy[1]).focused = true;
 
 	}
 	
