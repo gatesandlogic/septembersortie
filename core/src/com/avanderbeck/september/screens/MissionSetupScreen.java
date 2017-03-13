@@ -125,17 +125,20 @@ public class MissionSetupScreen implements Screen, InputProcessor {
 				xoff = 0;
 			l.drawTag(game.batch, LISTX + xoff,  LISTY - (34 * n++), false, droid8pt);
 		}
-			
-		current.drawProfile(384, 16);
-
-		droidSans.draw(game.batch, current.getName(), 292, 355);
-		courier.draw(game.batch, (int)current.hp + "/" + current.maxHP, 292, 330);
-		courier.draw(game.batch, "On " + gb.getTile(current.x, current.y).terrainString(), 292, 316);
-		if(gb.getTile(current.x, current.y).getDefense() > 0)
-			courier.draw(game.batch, "+" + gb.getTile(current.x, current.y).getDefense() + " defense", 300, 302);
 		
-		courier.draw(game.batch, "Atk:" + current.atk, 400, 330);
-		courier.draw(game.batch, "Def:" + current.getDefense(), 400, 316);
+		if(current != null)
+		{
+			current.drawProfile(384, 16);
+	
+			droidSans.draw(game.batch, current.getName(), 292, 355);
+			courier.draw(game.batch, (int)current.hp + "/" + current.maxHP, 292, 330);
+			courier.draw(game.batch, "On " + gb.getTile(current.x, current.y).terrainString(), 292, 316);
+			if(gb.getTile(current.x, current.y).getDefense() > 0)
+				courier.draw(game.batch, "+" + gb.getTile(current.x, current.y).getDefense() + " defense", 300, 302);
+			
+			courier.draw(game.batch, "Atk:" + current.atk, 400, 330);
+			courier.draw(game.batch, "Def:" + current.getDefense(), 400, 316);
+		}
 		
 		for(Button b : buttons)
 			b.draw();
@@ -230,8 +233,15 @@ public class MissionSetupScreen implements Screen, InputProcessor {
 				
 			if(t.focused)
 			{
+				//add someone to the tile, defocus it, then remove them from the choices
 				current.deploy(gb, x, y);
 				turnQ.add(current);
+				t.focused = false;
+				recruits.remove(current);
+				if(!recruits.isEmpty())
+					current = recruits.get(0);
+				else
+					current = null;
 			}
 
 		}
