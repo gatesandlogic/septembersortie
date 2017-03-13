@@ -1,0 +1,7 @@
+{
+ "title":"Test Map 2",
+ "description":"There is a load of unexplored territory, and it's teeming with enemies. Get in, destroy, get out.",
+ "difficulty":1,
+ "file":"testmap2.json",
+ "coords":[[1,1], [2,1], [10,1], [11,1], [5,2], [6,2], [7,2]]
+}
