@@ -167,7 +167,7 @@ public class RecruitScreen implements Screen, InputProcessor {
 		courier.draw(game.batch, "Def:" + current.getDefense(), 400, 316);
 		
 		//draw the cursor on top of everything else
-		game.batch.draw(cursor, mousex, mousey - 16);
+		//game.batch.draw(cursor, mousex, mousey - 16);
 				
 		//droid8pt.draw(game.batch, Gdx.graphics.getFramesPerSecond() + "fps", 2, 368);
 

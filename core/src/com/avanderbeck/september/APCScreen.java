@@ -191,7 +191,7 @@ public class APCScreen implements Screen, InputProcessor {
 		dun.draw();
 		
 		//draw the cursor on top of everything else
-		game.batch.draw(cursor, mousex, mousey - 16);
+		//game.batch.draw(cursor, mousex, mousey - 16);
 				
 
 		game.batch.end();
