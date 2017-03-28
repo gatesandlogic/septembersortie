@@ -1,6 +1,6 @@
 package com.avanderbeck.september;
 
-import com.avanderbeck.september.screens.PersonnelScreen;
+import com.avanderbeck.september.screens.MissionSelectScreen;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -54,7 +54,10 @@ public class LoadingScreen implements Screen {
 		game.assman.load("lolis/mapunits/scoutloli2.png", Texture.class);
 		game.assman.load("lolis/enemyscout.png", Texture.class);
 		game.assman.load("lolis/artillerycannon.png", Texture.class);
+		game.assman.load("lolis//mapunits/thormorser.png", Texture.class);
+
 		game.assman.load("lolis/APCprofile.png", Texture.class);
+		
 
 		game.assman.load("lolis/turntags.png", Texture.class);
 		
@@ -130,7 +133,7 @@ public class LoadingScreen implements Screen {
 			game.units.add(game.charGen.getRocket(game, null));
 			game.units.add(game.charGen.getAPC(game, null));
 			
-			game.setScreen(new PersonnelScreen(game));
+			game.setScreen(new MissionSelectScreen(game));
 			//game.setScreen(new GameScreen(game));
 			
 		}

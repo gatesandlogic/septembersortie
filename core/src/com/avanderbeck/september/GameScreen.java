@@ -87,7 +87,7 @@ public class GameScreen implements Screen, InputProcessor{
 		
 		turnQ = new TurnManager(game);
 		
-		gb = new GameBoard(13, 22, game, turnQ);
+		gb = new GameBoard(13, 22, game, mission, turnQ);
 				
 		turnQ.add(new Artillery(game, gb, turnQ));
 		

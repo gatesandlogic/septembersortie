@@ -27,6 +27,7 @@ public class NMELoli extends MapUnit {
 	float stateTime = 0;
 	float deathTime = 0;
 	
+	//view range for targeting, and attacking
 	int view;
 
 	TurnManager lolis;

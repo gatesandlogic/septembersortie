@@ -27,12 +27,12 @@ public class GameBoard implements TileBasedMap{
 	
 	TurnManager turnQ;
 	
-	public GameBoard(int w, int h, Sortie game, TurnManager turnQ)
+	public GameBoard(int w, int h, Sortie game, Mission mission, TurnManager turnQ)
 	{
 		
 		this.game = game;
 		this.turnQ = turnQ;
-		map = getMapFromJson();
+		map = getMapFromJson(mission.getFile());
 		
 		boardXPos = 4;
 		boardYPos = 4;
@@ -201,11 +201,11 @@ public class GameBoard implements TileBasedMap{
 		}
 	}
 	
-	private TileDMap getMapFromJson()
+	private TileDMap getMapFromJson(String file)
 	{
 		TileDMap retval;
 		
-		String json = Gdx.files.internal("maps/testmap2.json").readString();
+		String json = Gdx.files.internal("maps/" + file).readString();
 		
 		Gson gson = new Gson();
 		retval = gson.fromJson(json, TileDMap.class);

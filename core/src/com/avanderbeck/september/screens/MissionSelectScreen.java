@@ -94,7 +94,7 @@ public class MissionSelectScreen implements Screen, InputProcessor {
 		
 		Gson gson = new Gson();
 		missions.add(new MissionButton(game, 0, game.GH - (64 * 2) , 224, 64, true,
-				gson.fromJson(Gdx.files.internal("maps/mission1.json").readString(), Mission.class)));
+				gson.fromJson(Gdx.files.internal("maps/bossmission.json").readString(), Mission.class)));
 		
 		missions.add(new MissionButton(game, 4, game.GH - (64*3), 224, 64, false,
 				gson.fromJson(Gdx.files.internal("maps/mission2.json").readString(), Mission.class)));
