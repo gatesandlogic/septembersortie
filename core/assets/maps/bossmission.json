@@ -1,0 +1,7 @@
+{
+ "title":"Kill the Boss",
+ "description":"Destroy the cannon before it blows you up.",
+ "difficulty":3,
+ "file":"bosstestmap.json",
+ "coords":[[1,1], [2,1], [10,1], [11,1], [5,2], [6,2], [7,2]]
+}
